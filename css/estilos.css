@@ -1,0 +1,777 @@
+*{box-sizing: border-box; padding: 0; margin: 0;}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700;800&display=swap');
+body a{
+    text-decoration: none;
+}
+/* nav */
+header{
+    height: 165px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+nav input, nav label{
+    display: none;
+}
+.logo:hover{
+    transform: scale(1.2);
+}
+.lineaDeco{
+    width: 97%;
+    margin: auto;
+}
+.redes{
+    width: 37px;
+    margin: 0 20px;
+    
+}
+.redes:hover{
+    transform: scale(1.2);
+}
+
+nav ul li{
+    display: inline;
+    padding: 20px 90px;
+    border-right: thin solid black;
+}
+nav ul li:last-child{
+    border-right: none;
+}
+nav ul li a{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color:#5F5F5F;
+}
+
+.nosotrosNav:hover, .ayuda:hover, .ayudar:hover, .contacto:hover{
+    font-weight: 800;
+}
+.nosotrosNav:hover, .contacto:hover{
+    color: #1C3678;
+}
+.ayuda:hover{
+    color: #EEA358;
+}
+.ayudar:hover{
+    color: #A9CE61;
+}
+
+/* nav responsive */
+
+@media screen and (max-width: 500px){
+    header{
+        height: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    .logo{
+        width: 170px;
+    }
+    .lineaDeco{
+        width: 85%;
+    }
+    ul, .redes{
+        display: none;
+    }
+    nav input:checked  ~ ul{
+        display:block;
+    }
+    nav input:checked  ~ label{
+        margin-top: 180px;
+        margin-left: 86px;
+    }
+    nav label {
+        box-sizing: border-box;
+        display: inline-block;
+        border: 1px solid #83827E;
+        border-radius: 5px;
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        text-align: center;
+        margin-left: 80px;
+        background-color: white;
+    }
+    nav ul li {
+        display: block;
+        padding: 10px;
+        list-style: none;
+        border-bottom: 1px solid #83827E;
+        border: 1px solid #83827E;
+        background-color: white;
+        position: relative;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+/* index */
+main{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 128px;
+    margin-top: 128px;
+}
+.TituloBajadaImagen{
+    display: flex;
+    margin-bottom: 223px;
+}
+.TituloBajadaImagen h1{
+    width: 720px;
+    font-family: 'Poppins', sans-serif;
+    color: #A9CE61;
+    font-size: 110px;
+    font-weight: 800;
+    margin-bottom: 164px;
+    line-height: 120px;
+
+}
+.TituloBajadaImagen h2{
+    width: 636px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    color: #5F5F5F;
+}
+.TituloBajadaImagen img{
+    margin-left: 9%;
+    margin-top: -100px;
+}
+
+/* botones */
+.botones{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botones img{
+    width: 356px;
+    height: 387px;
+}
+.botones .nosotros, .botones .necesitoAyuda, .botones .quieroAyudar, .botones .mandados, .botones .tramites, .botones .compania{
+    width: 498px;
+    height: 577px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 75px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+
+    
+}
+
+.botones .nosotros, .botones .mandados{
+    background-color: #1C3678;
+    }
+.botones .nosotros:hover, .botones .mandados:hover{
+    box-shadow: 0 0 20px #1C3678;
+}
+.botones .necesitoAyuda, .botones .tramites{
+    background-color: #EEA358;
+    }
+.botones .necesitoAyuda:hover, .botones .tramites:hover{
+        box-shadow: 0 0 40px #EEA358;
+    }
+.botones .quieroAyudar, .botones .compania{
+    background-color: #A9CE61;
+    }
+.botones .quieroAyudar:hover, .botones .compania:hover{
+    box-shadow: 0 0 40px #A9CE61;
+}
+    .botones .nosotros p, .botones .necesitoAyuda p, .botones .quieroAyudar p{
+    margin-bottom: 70px;
+}
+.botones .nosotros:hover, .botones .necesitoAyuda:hover, .botones .quieroAyudar:hover, .botones .mandados:hover, .botones .tramites:hover, .botones .compania:hover{
+    transform: scale(1.1);
+
+}
+.bajadaBotones{
+    width: 498px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    color: #5F5F5F;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+/* index responsive */
+@media screen and (max-width: 500px){
+    .TituloBajadaImagen h1{
+        font-size: 30px;
+        line-height: 40px;
+        width: 272px;
+        margin: 41px 0 36px 0;
+    }
+    .TituloBajadaImagen h2{
+        font-size: 14px;
+        width: 272px;
+
+    }
+    .TituloBajadaImagen{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        margin-left: 25px;
+
+    }
+    main{
+        margin: 20px 0 20px 30px;
+        
+    }
+    .TituloBajadaImagen img{
+        margin: 0 0 30px -20%;
+    }
+}
+/* botones responsive */
+@media screen and (max-width: 500px){
+    .botones{
+        display: flex;
+        flex-direction: column;
+        margin-left: 25px;
+    }
+    .botones .nosotros, .botones .necesitoAyuda, .botones .quieroAyudar, .botones .mandados, .botones .tramites, .botones .compania{
+        width: 248px;
+        height: 114px;
+        border-radius: 10px;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    .botones .bajadaBotones{
+        font-size: 14px;
+        width: 231px;
+        margin: 30px 0 60px 0;
+        text-align: left;
+    }
+    .botones .nosotros p, .botones .necesitoAyuda p, .botones .quieroAyudar p, .botones .mandados p, .botones .tramites p, .botones .compania p{
+        font-size: 21px;
+        width: 90px;
+        display: flex;
+        align-self: flex-start;
+        margin: 0 0 0 10px;
+    }
+    .botones img{
+        display: none;
+    }
+    .botones .nosotros{
+        background-image: url('../imagenes/recorte-quienes-somos.png');
+        background-size: 155px 90px;
+        }
+
+    .botones .necesitoAyuda{
+        background-image: url('../imagenes/necesitoayuda.png');
+        background-size: 95px 80px;
+        }
+
+    .botones .quieroAyudar{
+        background-image: url('../imagenes/quieroayudar.png');
+        background-size: 120px 106px;
+        }
+    .botones .mandados{
+        background-image: url('../imagenes/recorte\ mandados.png');
+        background-size: 150px 106px;
+        }
+    .botones .tramites{
+        background-image: url('../imagenes/recorte\ tramites.png');
+        background-size: 140px 103px;
+        }
+        .botones .compania{
+            background-image: url('../imagenes/recorte\ compañia.png');
+            background-size: 100px 99px;
+            }
+}
+
+/* nosotros */
+.contenedorNosEimg{
+    display: flex;
+    justify-content: space-between;
+}
+.sobreNosotros h1{
+    font-size: 72px;
+    font-family: 'Poppins', sans-serif;
+    color: #999999;
+}
+.sobreNosotros p{
+    width: 634px;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 38px;
+    color: #5F5F5F;
+    margin-top: 98px;
+}
+
+.boldh2{
+    color: #1C3678;
+}
+.contenedorNosEimg img{
+    margin-left: 12%;
+}
+/* nosotros responsive */
+@media screen and (max-width: 500px){
+    .contenedorNosEimg {
+        display: flex;
+        flex-direction: column;
+    } 
+    .contenedorNosEimg h1{
+        font-size: 24px;
+    }
+    .contenedorNosEimg p{
+        font-size: 14px;
+        line-height: 22px;
+        width: 272px;
+        margin-top: 30px;
+    }
+    .contenedorNosEimg img{
+        width: 360px;
+        margin: 0;
+        margin-top: 20px;
+        margin-left: -30px;
+    }
+}
+
+/* contacto */
+
+.secContacto h1, .secAyudar h1{
+    font-size: 72px;
+    font-family: 'Poppins', sans-serif;
+    color: #999999;
+    width: 986px;
+    margin-bottom: 108px;
+}
+article img {
+    width: 1000px;
+}
+.formulario{
+    display: flex;
+    justify-content: space-between;
+}
+
+form{
+    display: flex;
+}
+.datosPersonales {
+    margin-right: 108px; 
+    display: flex;
+    flex-direction: column;
+}
+.datosPersonales label {
+    margin-right: 10px; 
+    font-size: 24px;
+    }
+.datosPersonales select {
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 10px; 
+    }
+.datosPersonales input {
+    border-radius: 10px;
+    border: 2px solid #C4C4C4;
+    width: 249px;
+    height: 40px;
+    margin-bottom: 42px;
+}
+.datosPersonales, .campoComentarios p, .campoComentarios button {
+    font-family: 'Poppins', sans-serif;
+    color: #5F5F5F;
+}
+.campoComentarios p{
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+.campoComentarios textarea {
+    border-radius: 10px;
+    border: 2px solid #C4C4C4;
+
+}
+.campoComentarios button, .mapa button {
+    margin: 10px;
+    border-radius: 20px;
+    padding: 7px;
+    height: 50px;
+    width: 178px; 
+    background-color: #1C3678;
+    font-size: 24px;
+    color: white;
+}      
+.campoComentarios button:hover, .mapa button:hover{
+    transform: scale(1.1);
+}
+
+/* contacto responsive */
+@media screen and (max-width: 500px){
+    .secContacto h1, .secAyudar h1{
+        font-size: 24px;
+        width: 278px;
+        margin-bottom: 40px;
+    }
+    .formulario img{
+        display: none;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    .datosPersonales input {
+        width: 243px;
+        height: 33px;
+        margin-bottom: 25px;
+    }
+    .datosPersonales label, .campoComentarios p, .campoComentarios button {
+        font-size: 14px;
+        }
+    .campoComentarios p{
+        margin-bottom: 0;
+    }
+    .campoComentarios button {
+        height: 33px;
+        width: 118px; 
+    }   
+}
+
+/* mandados */
+
+.mandadosTituloImg, .tramitesTituloImg, .companiaTituloImg{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mandadosTituloImg h1, .tramitesTituloImg h1, .companiaTituloImg h1{
+    font-family: 'Poppins', sans-serif;
+    color: #1C3678;
+    font-weight: bolder;
+    font-size: 72px;
+    width: 652px;
+}
+.mandadosTituloImg h2, .tramitesTituloImg h2, .companiaTituloImg h2{
+    font-family: 'Open Sans', sans-serif;
+    width: 650px;
+    margin-top: 85px;
+    color: #5F5F5F;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.mandadosTituloImg img{
+    width: 482px;
+}
+
+.voluntariosDisponibles h3, .mapa h5, .selectTramite p, .CategoriasDisponibles h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    color: #5F5F5F;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* voluntarios disponibles */
+
+.voluntario, .categoria{
+    width: 359px;
+    height: 601px;
+    background-color: #1c367815;
+    border-radius: 40px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 51px;
+    padding: 43px;
+    transition: all .5s ease-in-out;
+}
+.fotoPersona{
+    width: 265px;
+    margin-bottom: 40px;
+}
+.voluntario h4, .categoria h4{
+    font-size: 24px;    
+    color: #5F5F5F;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.voluntario, .voluntarioDescripcion{
+    position: relative;
+}
+.voluntarioDescripcion{
+    display: none;
+    width: 359px;
+    height: 400px;
+    background-color: #1c3678;
+    color: white;
+    padding: 43px;
+    border-radius: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+.voluntario:hover{
+    top: -300px;
+    transform: rotate(2deg);
+}
+.voluntario:hover ~ .voluntarioDescripcion{
+    display: block;
+    top: -400px;
+}
+
+.icon{
+    display: flex;
+    margin-top: 45px;
+}
+.icon img{
+    width: 24px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+/* mapa */
+.mapa{
+    display: flex;
+    flex-direction: column;
+}
+.direccion img{
+    width: 41px;
+}
+.direccion{
+    display: flex;
+}
+.direccion p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    margin-left: 30px;
+    align-self: center;
+}
+.mapa iframe{
+    margin-top: 50px;
+}
+
+/* tramites*/
+.tramitesTituloImg h1{
+    color:#EEA358;
+}
+.tramitesTituloImg img{
+    width: 650px;
+}
+select{
+    background: transparent;
+    border: 2px solid #C4C4C4;
+    height: 80px;
+    padding: 5px;
+    width: 400px;
+    margin: 40px 0;
+    border-radius: 15px;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+}
+select:focus{ 
+    outline: none;
+}
+
+/* compania */
+
+.companiaTituloImg h1{
+    color: #A9CE61;
+}
+.companiaTituloImg img{
+    width: 466px;
+}
+
+.categoria img{
+    margin-top: 50px;
+
+}
+.categoria{
+    background-color: #9999992c;
+}
+.categoria button{
+    width: 182px;
+    height: 40px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    background-color: #A9CE61;
+    border-radius: 15px;
+    border: none;
+    margin-top: 90px;
+
+}
+
+.CategoriasConjunto-slider, .voluntariosConjunto-slider{
+    width: 1920px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+.CategoriasConjunto-slider::before, .CategoriasConjunto-slider::after, .voluntariosConjunto-slider::before, .voluntariosConjunto-slider::after{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    z-index: 2;
+}
+.CategoriasConjunto-slider::before, ..voluntariosConjunto-slider::before{
+    top: 0;
+    left: 0;
+}
+.CategoriasConjunto-slider::after, .voluntariosConjunto-slider::after{
+    top:0;
+    right: 0;
+    transform: rotateZ(180deg);
+}
+.CategoriasConjunto-slider .CategoriasConjunto-slider-track{
+    width: calc(250px * 14);
+    animation: scroll 40s infinite linear;
+}
+.voluntariosConjunto-slider .voluntariosConjunto-slider-track{
+    width: calc(250px * 14);
+    animation: scroll 40s infinite linear;
+}
+.CategoriasConjunto-slider-track, .voluntariosConjunto-slider-track{
+    display: flex;
+    margin: 74px 0;
+}
+@keyframes scroll{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+/* sector necesito ayuda responsive */
+
+@media screen and (max-width: 500px){
+    .mandadosTituloImg h1, .companiaTituloImg h1, .tramitesTituloImg h1{
+        font-size: 21px;
+        width: 200px;
+}
+.mandadosTituloImg h2, .companiaTituloImg h2, .tramitesTituloImg h2{
+    font-size: 14px;
+    width: 290px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.mandadosTituloImg img, .companiaTituloImg img, .tramitesTituloImg img{
+    width: 140px;
+    height: 150px;
+    display: none;
+}
+.voluntariosDisponibles h3, .CategoriasDisponibles h3, .selectTramite p, .mapa h5{
+    font-size: 14px;
+} 
+.mapa p{
+    font-size: 14px;
+}
+.mapa iframe{
+    width: 260px;
+    height: 260px;
+}
+.mapa button{
+    width: 100px;
+    font-size: 14px;
+    height: 30px;
+}
+.categoria button{
+    width: 150px;
+    font-size: 14px;
+    height: 40px;
+}
+.voluntario, .categoria{
+    width: 203px;
+    height: 381px;
+}
+.voluntarioDescripcion{
+    width: 203px;
+    height: 381px;
+    font-size: 12px;
+}
+
+.voluntario img{
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.categoria img{
+    width: 110px;
+}
+.voluntario h4{
+    font-size: 14px;
+}
+.voluntario p{
+    font-size: 12px;
+}
+.icon{
+    margin-top: 20px;
+}
+.icon img{
+    width: 16px;
+    height: 20px;
+
+}
+.icon img:last-of-type{
+    margin-left: 10px;
+
+}
+.icon p{
+    font-size: 10px;
+}
+select{
+    font-size: 10px;
+    height: 40px;
+    padding: 5px;
+    width: 180px;
+    margin: 40px 0;
+    border-radius: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+}
+
+
+/* footer */
+footer{
+    height: 200px;
+    background-color: #E6E6E6;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+footer img{
+    width: 100px;
+    margin-left: 30px;
+}
+footer p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: #83827E;
+    margin: 0 20px 0 100px;
+}
+/* footer responsive */
+@media screen and (max-width: 500px){
+    footer{
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    footer img{
+        width: 70px;
+        margin: 30px 180px 20px 5px;
+
+    }
+    footer p{
+        font-size: 12px;
+        margin-left: 56px;
+        line-height: 25px;
+        width: 284px;
+    }
+}
+
+
+
